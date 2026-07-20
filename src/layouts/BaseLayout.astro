@@ -1,0 +1,21 @@
+---
+import Navbar from "../components/Navbar.astro";
+
+const { title = "Blake's Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+  </head>
+
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>
