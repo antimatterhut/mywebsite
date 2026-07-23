@@ -1,0 +1,49 @@
+<footer class="footer">
+  <p class="copyright">© 2026 Blake Savell. All rights reserved.</p>
+
+  <div class="social-links">
+    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #0a0a0a;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .copyright {
+    color: #666666;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .social-links a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .social-links a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>

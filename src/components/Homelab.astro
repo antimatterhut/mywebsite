@@ -1,0 +1,133 @@
+<section class="homelab">
+  <div class="homelab-content">
+    <span class="badge">🖥️ Featured</span>
+    <h2>The Homelab</h2>
+    <p>
+      Beyond the portfolio, I run a self-hosted homelab where I
+      experiment with <strong>networking</strong>, <strong>virtualization</strong>,
+      and <strong>system administration</strong> — breaking things on
+      purpose so I can learn how to fix them.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Servers running</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">12</span>
+        <span class="stat-label">Self-hosted services</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">∞</span>
+        <span class="stat-label">Things broken (on purpose)</span>
+      </div>
+    </div>
+
+    <a href="/homelab" class="btn-primary">
+      Explore the Homelab Blog
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17L17 7M17 7H7M17 7V17" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  .homelab {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .homelab-content {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 1.5rem;
+    padding: 3rem;
+  }
+
+  .badge {
+    display: inline-block;
+    border: 1px solid #333333;
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+  }
+
+  .homelab-content h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+  }
+
+  .homelab-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #999999;
+    max-width: 650px;
+    margin-bottom: 2rem;
+  }
+
+  .homelab-content p strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .stats {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ff00;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #888888;
+    margin-top: 0.25rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+
+  @media (max-width: 768px) {
+    .homelab-content {
+      padding: 2rem;
+    }
+
+    .homelab-content h2 {
+      font-size: 1.75rem;
+    }
+
+    .stats {
+      gap: 1.5rem;
+    }
+  }
+</style>

@@ -1,5 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 const { title = "Blake's Portfolio" } = Astro.props;
 ---
@@ -9,13 +11,12 @@ const { title = "Blake's Portfolio" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-
-    <link rel="stylesheet" href="../styles/global.css">
+    <title> {title} </title>
   </head>
 
   <body>
     <Navbar />
     <slot />
+    <Footer/>
   </body>
 </html>
