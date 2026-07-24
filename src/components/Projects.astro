@@ -1,0 +1,159 @@
+<section class="projects" id="projects">
+  <div class="projects-inner container">
+    <h2>All Projects</h2>
+    <p class="intro">A complete collection of my work, side projects, and experiments.</p>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-thumb thumb-blue">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+            <path d="M19 15l.7 2.1L22 18l-2.3.9L19 21l-.7-2.1L16 18l2.3-.9L19 15z" />
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <h3>2026 Midterm Predictor</h3>
+            <span class="status-badge">Completed</span>
+          </div>
+          <p class="project-description">
+            Predicts U.S. House midterm outcomes at the county level using
+            ecological inference and polling data.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">+1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb thumb-orange">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+            <path d="M19 15l.7 2.1L22 18l-2.3.9L19 21l-.7-2.1L16 18l2.3-.9L19 15z" />
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <h3>This Portfolio</h3>
+            <span class="status-badge">In Progress</span>
+          </div>
+          <p class="project-description">
+            The site you're on right now — built from scratch with Astro
+            and custom CSS.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">Astro</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 3rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .projects-inner h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .intro {
+    color: #999999;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+
+  .project-thumb {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  .thumb-blue {
+    background: linear-gradient(135deg, #0a1a3a, #1a2f5a);
+  }
+
+  .thumb-orange {
+    background: linear-gradient(135deg, #3a1a0a, #5a2f1a);
+  }
+
+  .project-body {
+    padding: 1.5rem;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .status-badge {
+    font-size: 0.75rem;
+    color: #999999;
+    border: 1px solid #333333;
+    border-radius: 0.4rem;
+    padding: 0.25rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .project-description {
+    color: #999999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    color: #cccccc;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
