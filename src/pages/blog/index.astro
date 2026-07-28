@@ -1,0 +1,32 @@
+---
+// src/pages/blog/index.astro
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="Blog">
+  <h1>Blog</h1>
+
+  <ul>
+    {sortedPosts.map((post) => (
+      <li>
+        <a href={`/blog/${post.id}`}>
+          <h2>{post.data.title}</h2>
+        </a>
+        <p>{post.data.pubDate.toDateString()}</p>
+        <p>{post.data.description}</p>
+        <div>
+          {post.data.tags.map((tag) => (
+            <a href={`/tags/${tag}`}>#{tag}</a>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

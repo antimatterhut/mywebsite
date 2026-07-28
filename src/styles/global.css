@@ -20,6 +20,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
-#home{
+section {
   scroll-margin-top: 6rem;
+}
+
+#about {
+  scroll-margin-top: 0rem; /* smaller number = scrolls further up / closer to the true top */
 }

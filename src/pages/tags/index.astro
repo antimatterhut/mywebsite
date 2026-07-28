@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+// Flatten all tags from all posts, then dedupe
+const allTags = [...new Set(posts.flatMap((post) => post.data.tags))].sort();
+---
+
+<BaseLayout title="Tags">
+  <h1>Tags</h1>
+  <ul>
+    {allTags.map((tag) => (
+      <li>
+        <a href={`/tags/${tag}`}>#{tag}</a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
