@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomelabLayout from '../../layouts/HomelabLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -25,7 +25,7 @@ const sortedPosts = posts.sort(
 );
 ---
 
-<BaseLayout title={`Posts tagged "${tag}"`}>
+<HomelabLayout title={`Posts tagged "${tag}"`}>
   <h1>Posts tagged "{tag}"</h1>
   <ul>
     {sortedPosts.map((post) => (
@@ -35,4 +35,4 @@ const sortedPosts = posts.sort(
       </li>
     ))}
   </ul>
-</BaseLayout>
+</HomelabLayout>

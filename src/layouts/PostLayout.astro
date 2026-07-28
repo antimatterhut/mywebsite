@@ -1,11 +1,11 @@
 ---
 // src/layouts/PostLayout.astro
-import BaseLayout from './BaseLayout.astro';
+import HomelabLayout from "./HomelabLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title}>
+<HomelabLayout title={frontmatter.title}>
   <article>
     <h1>{frontmatter.title}</h1>
     <p>
@@ -16,4 +16,4 @@ const { frontmatter } = Astro.props;
     </p>
     <slot />
   </article>
-</BaseLayout>
+</HomelabLayout>

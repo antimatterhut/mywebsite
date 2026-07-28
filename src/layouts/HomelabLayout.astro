@@ -1,0 +1,39 @@
+---
+import HomelabNav from "../components/HomelabNav.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const { title = "Blake's Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <div class="homelab-page-wrapper">
+      <HomelabNav />
+      <main class="homelab-main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  .homelab-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .homelab-main {
+    flex: 1;
+    padding:0 2rem;
+  }
+</style>
